@@ -14,3 +14,13 @@ export const FooterBase = styled.footer`
     margin-bottom: 50px;
   }
 `;
+
+export const Sabagames = styled.a`
+  font-size: 28px;
+  text-decoration: none;
+  transition: opacity 0.2s;
+  color: var(--colorSaba);
+  &:hover {
+    opacity: 0.5;
+  }
+`;

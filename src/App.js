@@ -14,6 +14,15 @@ function App() {
         url={dadosIniciais.categorias[0].videos[0].url}
         videoDescription={"O que é Front-end?"}
       />
+      {
+        dadosIniciais.categorias.map( (categoria, index) => 
+          <Carousel 
+              ignoreFirstVideo = {!index ? categoria.videos[0] : null}
+              category = {categoria}
+          />
+        )
+      }
+      <Footer />
     </div>
   );
 }
