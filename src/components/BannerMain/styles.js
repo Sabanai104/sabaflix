@@ -25,7 +25,7 @@ ContentAreaContainer.Item = styled.div`
 `;
 
 ContentAreaContainer.Category = styled.h1`
-  font-family: Roboto;
+  font-family: 'Bungee', cursive;
   font-style: normal;
   font-weight: normal;
   font-size: 60px;
@@ -101,25 +101,25 @@ export const BannerMainContainer = styled.section`
 `;
 
 export const WatchButton = styled.button`
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Bungee', cursive;
   box-sizing: border-box;
   cursor: pointer;
-  padding: 16px 24px;
-  font-style: normal;
+  display: inline-block;
+  padding: 16px 50px;
   font-weight: bold;
   font-size: 16px;
-  outline: none;
   border-radius: 5px;
-  text-decoration: none;
-  display: inline-block;
   border: 1px solid transparent;
   color: var(--black);
-  background: var(--white);
+  background: var(--grayMedium);
   border-color: var(--black);
-  transition: opacity .3s;
-  display: none;
-  margin: 0 auto;
-  @media (max-width: 800px) {
-    display: block;
+  position: relative;
+  margin-left: -100%;
+  text-decoration: none;
+
+  @media(max-width:800px) {
+    margin: auto;
+    display: flex;
+    width: 190px;
   }
 `;

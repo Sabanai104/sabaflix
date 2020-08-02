@@ -1,19 +1,25 @@
 import React from 'react';
 import Logo from '../../assets/img/Sabaflix.png';
-import Button from '../Button/';
-//import ButtonLink from './components/ButtonLink';
+import ButtonLink from '../Button/';
 import './style.css'
+import { useHistory, Link } from 'react-router-dom';
 
 const Menu = () => {
+    const history = useHistory();
+    
+    const pressButton = () => {
+        history.push("/cadastro");
+    }
+
     return (
         <nav className="Menu" >
-            <a href="/">
+            <Link to="/">
                 <img className="Logo" src={Logo} alt="Sabaflix" />
-            </a>
+            </Link>
 
-            <Button as="a" className="ButtonLink" href="/" >
+            <ButtonLink as="a" className="ButtonLink" onClick={pressButton} >
                 Novo vídeo
-            </Button>
+            </ButtonLink>
         </nav>
     );
 }
